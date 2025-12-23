@@ -1,0 +1,511 @@
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.nav-bar{
+    background-color: #434D59;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    
+}
+nav{
+   flex: 1;
+   text-align: right;
+}
+nav ul{
+    list-style-type: none;
+    display: inline-block;
+}
+nav ul li{
+    display: inline-block;
+    margin-right: 20px;
+}
+a{
+    text-decoration: none;
+    color: #E1D9CC;
+}
+/* ===responsive for navbar section===== */
+@media (max-width: 768px) {
+  .nav-bar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  nav {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+}
+
+/* ======hero section start====== */
+.container{
+    margin: auto;
+    max-width: 1300px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.hero-sec{
+display: flex;
+align-items: center;
+flex-wrap: wrap;
+justify-content: space-around;
+background-color: #E1D9CC;
+}
+.players-png{
+    flex-basis: 50%;
+    min-width: 300px;
+}
+.players-png img{
+    max-width: 100%;
+    padding: 50px;
+}
+.hero-cont h1{
+font-size: 40px;
+line-height: 50px;
+/* margin: 20px; */
+}
+.hero-icons{
+    display:inline-block;
+    padding: 10px;
+   
+}
+
+ .laligaicons-img {
+    width: 50px;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 50px;
+   margin: 5px; 
+ }
+ .premiericons-img{
+     width: 54px;
+     height: 50px;
+    border: 2px solid black;
+    border-radius: 50px;
+   margin: 5px; 
+ }
+ .ligueicons-img{
+      width: 54px;
+      height: 50px;
+    border: 2px solid black;
+    border-radius: 50px;
+   margin: 5px; 
+ }
+
+
+/* =====responsive for hero section===== */
+@media (max-width: 768px) {
+  .hero-sec {
+    text-align: center;
+    padding: 30px 10px;
+  }
+
+  .hero-cont h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .players-png img {
+    padding: 20px;
+  }
+}
+
+
+
+
+ /* =======cards section start======== */
+
+#cards_area{
+    padding: 50px 0;
+    background-color: #434D59;
+    width: 100%;
+}
+ .wrapper{
+    padding: 10px 10%;
+ }
+
+.box_area{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 80px;
+    max-width: 1200px;
+    margin: auto;
+}
+.box{
+    height: 380px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 5px 5px 15px;
+
+}
+.box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+.overlay{
+    color: white;
+    height: 0;
+    width: 100%;
+    background: linear-gradient(transparent,#1c1c1c 58%);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 12px;
+    transition: height 0.5s;
+}
+.overlay h4{
+   font-weight: 500;
+   font-size: 30px;
+   font-family: 'Times New Roman', Times, serif;
+   margin-top: 80%;
+   margin-bottom: 5px;
+   letter-spacing: 2px;
+}
+.overlay a{
+    margin-top: 10px;
+    text-decoration: none;
+    font-size: 14px;
+   background: beige;
+   border-radius: 50px;
+   text-align: center;
+   padding: 4px 15px;
+
+}
+.boxLhover  img{
+    transform: scale(1.2);
+}
+.box:hover .overlay{
+    height: 100%;
+}
+
+
+/* ======responsive of cards section======= */
+@media (max-width: 1024px) {
+  .box_area {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .box_area {
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+  }
+}
+
+
+
+
+
+/* =======stadiums section start======= */
+
+.stadiums {
+  width: 100%;
+  margin-top: 50px;
+  
+}
+
+
+.stadium-row {
+  width: 100%;
+  height: 70vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+/* Dark effect */
+.stadium-overlay {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.3)
+  );
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.stadium-overlay h2 {
+  color: #ffffff;
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.stadium-overlay p {
+  color: #dddddd;
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+/* Button */
+.stadium-btn {
+  width: fit-content;
+  padding: 12px 28px;
+  background-color: #1db954;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.stadium-btn:hover {
+  background-color: #17a84b;
+  transform: translateY(-3px);
+}
+
+/* ====responsive for stadiums section===== */
+@media (max-width: 768px) {
+  .stadium-row {
+    height: 50vh;
+  }
+
+  .stadium-overlay {
+    padding: 30px;
+  }
+
+  .stadium-overlay h2 {
+    font-size: 2rem;
+  }
+
+  .stadium-overlay p {
+    font-size: 1rem;
+  }
+}
+
+
+/* ======about section start====== */
+
+#about {
+  padding: 80px 8%;
+  /* background: linear-gradient(to right, #f8fff8, #ffffff); */
+  background-color: #434D59;
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-tag {
+  color: #C2CBD3;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.about-text h2 {
+  font-size: 38px;
+  color: #E1D9CC;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  color: #E1D9CC;
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+
+.about-stats {
+  display: flex;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.about-stats div {
+  background: #E1D9CC;
+  padding: 20px 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.about-stats h3 {
+  color: #434D59;
+  font-size: 26px;
+}
+
+.about-stats span {
+  font-size: 14px;
+  color: #434D59;
+}
+
+.about-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.about-images img {
+  width: 100%;
+  border-radius: 18px;
+  object-fit: cover;
+  box-shadow: 5px 15px 40px rgba(0,0,0,0.15);
+}
+
+/* Responsive for about section*/
+@media (max-width: 900px) {
+  .about-container {
+    grid-template-columns: 1fr;
+  }
+
+  .about-text h2 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-stats {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+/* ======footer section start====== */
+
+.footer {
+  background-color: #E1D9CC;
+  color: #434D59;
+  padding: 60px 0 0;
+  font-family: Arial, sans-serif;
+  width: 100%;
+  margin: 0;
+  
+}
+
+.footer-container {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.footer-box h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #434D59;
+}
+
+.footer-logo {
+  font-size: 26px;
+  color: #434D59;
+  margin-bottom: 10px;
+}
+
+.footer-box p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #434D59;
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #434D59;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: black;
+}
+
+/* Form */
+.footer-form {
+  display: flex;
+  margin-top: 10px;
+}
+
+.footer-form input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 4px 0 0 4px;
+}
+
+.footer-form button {
+  padding: 10px 15px;
+  border: none;
+  background: #434D59;
+  color: #E1D9CC;
+  cursor: pointer;
+  border-radius: 0 4px 4px 0;
+  font-weight: bold;
+}
+
+.footer-form button:hover {
+  background: #313851;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+  background-color: #434D59;
+  color: #E1D9CC;
+  font-size: 14px;
+}
+
+
+
+/* =====responsive for footer section====== */
+@media (max-width: 500px) {
+  .footer-form {
+    flex-direction: column;
+  }
+
+  .footer-form input,
+  .footer-form button {
+    border-radius: 4px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
